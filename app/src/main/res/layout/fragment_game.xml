@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".GameFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/GameConstraint"
+        android:layout_height="match_parent"
+        android:background="@drawable/party_brainiac_background_brown_zoom_dark_extra"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/TvWord"
+            style="@style/myTextViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get ready"
+            android:textSize="90sp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/TvTimer"
+            style="@style/myTextViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tilt phone to start"
+            android:padding="10dp"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/TvWord"
+            app:layout_constraintEnd_toEndOf="@+id/TvWord"
+            app:layout_constraintStart_toStartOf="@+id/TvWord"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/PbWordTimer"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:max="60"
+            app:layout_constraintBottom_toTopOf="@+id/TvWord"
+            app:layout_constraintEnd_toEndOf="@+id/TvWord"
+            app:layout_constraintStart_toStartOf="@+id/TvWord"
+            app:layout_constraintTop_toBottomOf="@+id/TvTimer" />
+
+        <TextView
+
+            android:id="@+id/TvPointCounterPoints"
+            style="@style/myTextViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="34sp"
+            android:paddingRight="10dp"
+            android:layout_marginStart="20dp"
+            android:text="0"
+            app:layout_constraintStart_toEndOf="@+id/TvPointCounterText"
+            app:layout_constraintTop_toTopOf="@+id/TvPointCounterText" />
+
+        <TextView
+            android:id="@+id/TvPointCounterText"
+            style="@style/myTextViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="34sp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="Score: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/BuPlaceHolderGameToGameOver"
+            style="@style/myActionButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="End Game"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/TvWordsClearedCounterText"
+            style="@style/myTextViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="Words cleared: "
+            app:layout_constraintBottom_toTopOf="@+id/TvWordsSkippedCounterText"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/TvWordsSkippedCounterText"
+            style="@style/myTextViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="24dp"
+            android:text="Words skipped: "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/TvWordClearedCount"
+            style="@style/myTextViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="FOO"
+            app:layout_constraintBottom_toBottomOf="@+id/TvWordsClearedCounterText"
+            app:layout_constraintStart_toEndOf="@+id/TvWordsClearedCounterText"
+            app:layout_constraintTop_toTopOf="@+id/TvWordsClearedCounterText"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/TvWordsSkippedCount"
+            style="@style/myTextViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BAR"
+            app:layout_constraintStart_toStartOf="@+id/TvWordClearedCount"
+            app:layout_constraintTop_toTopOf="@+id/TvWordsSkippedCounterText" />
+
+        <nl.dionsegijn.konfetti.KonfettiView
+            android:id="@+id/viewConfetti"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <Button
+            android:id="@+id/BuSkipWord"
+            style="@style/myActionButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Skip"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/BuPlaceHolderGameToGameOver"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/BuNextWord"
+            style="@style/myActionButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Next"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/BuSkipWord"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Party Brainiac</string>
+    <string name="about"> FourGurus proudly presents you\nParty Brainiac™!\nA game where learning can be a blast.\nWe are a Finnish group of students from Oulu working on a school project.\nOur goal was to create a fun way to play word guessing.</string>
+    <string name="authors"> Mikael Hartikainen\nIida Järvelä\nDaniel Leinonen\nNiko Manninen\nJuho Nuorala\nJoona Tulisalo </string>
+    <string name="responsibilities"> Sound Designer\nArt Designer\nGame Director\nTechnical Designer\nGame Programmer\nGame Programmer </string>
+    <string name="instructions"> Place your phone on your forehead.\nOthers will explain the word shown to you.\nIf you guess right tilt your phone downwards.\nIf you can\'t guess the word tilt your phone upwards to skip the word. </string>
+</resources>

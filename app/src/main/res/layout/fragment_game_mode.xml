@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".GameModeFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/GameModeConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/party_brainiac_background_brown_zoom_dark"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/BuGameModeToMainMenu"
+            style="@style/myBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/BuGameModeLanguage"
+            style="@style/myGameModeButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:padding="10dp"
+            android:text="Language"
+
+            app:layout_constraintBottom_toBottomOf="@+id/BuGameModeParty"
+            app:layout_constraintEnd_toStartOf="@+id/BuGameModeParty"
+            app:layout_constraintTop_toTopOf="@+id/BuGameModeParty"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/BuGameModeParty"
+            style="@style/myGameModeButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Party"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.65" />
+
+        <Button
+            android:id="@+id/BuGameModeLearn"
+            style="@style/myGameModeButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Learn"
+            android:padding="10dp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/BuGameModeParty"
+            app:layout_constraintStart_toEndOf="@+id/BuGameModeParty"
+            app:layout_constraintTop_toTopOf="@+id/BuGameModeParty" />
+
+        <TextView
+            android:id="@+id/TvGameModeSelect"
+            style="@style/myTextViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="350dp"
+            android:text="Select\nGame Mode"
+            android:textSize="50sp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.225" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "487996190070",
+    "firebase_url": "https://partybrainiac-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "partybrainiac",
+    "storage_bucket": "partybrainiac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487996190070:android:e54292b8c881f6db1e5e57",
+        "android_client_info": {
+          "package_name": "com.group14.partybrainiac"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "487996190070-k418ml6fpe3154i6bpa0hj5clacc8t95.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzNZKfHn-k1FpzIBQ7HLhU63oUrgoFB-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "487996190070-k418ml6fpe3154i6bpa0hj5clacc8t95.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

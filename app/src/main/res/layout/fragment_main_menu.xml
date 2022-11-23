@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainMenuFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/MainMenuConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/party_brainiac_background_brown_zoom_dark"
+        >
+
+        <Button
+            android:id="@+id/BuMainMenuQuit"
+            style="@style/myBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Quit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Button
+            android:id="@+id/BuMainMenuToSettingsPage"
+            style="@style/myActionButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Settings"
+            app:layout_constraintBottom_toBottomOf="@+id/BuMainMenuQuit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/BuMainMenuQuit"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/BuMainMenuToInfoPage"
+            style="@style/myActionButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Info"
+            app:layout_constraintBottom_toBottomOf="@+id/BuMainMenuQuit"
+            app:layout_constraintEnd_toStartOf="@+id/BuMainMenuToSettingsPage"
+            app:layout_constraintTop_toTopOf="@+id/BuMainMenuQuit" />
+
+        <ImageView
+            android:id="@+id/partyBrainiacLogo"
+            android:layout_width="238dp"
+            android:layout_height="154dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/party_brainiac_official_logo_outlined_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/partyBrainiacText"
+            android:layout_width="655dp"
+            android:layout_height="108dp"
+            android:src="@drawable/party_brainiac_official_text_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.498" />
+
+        <Button
+            android:id="@+id/BuMainMenuToGameMode"
+            style="@style/myGameModeButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play"
+            android:textSize="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/partyBrainiacText"
+            app:layout_constraintVertical_bias="0.15" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
